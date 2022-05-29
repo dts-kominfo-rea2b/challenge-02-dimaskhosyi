@@ -20,22 +20,38 @@ function lakukanLooping(arrPegawai) {
   /*
     TODO 1: Buatlah sebuah variabel bernama "hasilLooping" 
       yang berisi gabungan nama depan dan belakang dari masing masing pegawai
-
       Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
   */
-  let hasilLooping = null;
+  let hasilLooping = [];
+  for(let i = 0; i < arrPegawai.length; i++){
+    hasilLooping.push(`${arrPegawai[i].namaDepan} ${arrPegawai[i].namaBelakang}`)
+  }
 
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
-  let jumlahPria = null;
+  let jumlahPria = [];
 
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
-  let jumlahWanita = null;
+  let jumlahWanita = [];
+
+  for(let i = 0; i < arrPegawai.length; i++){
+    switch(arrPegawai[i].jenisKelamin){
+      case "F":
+      return jumlahPria.push("a")
+      break;
+      case "M":
+      return jumlahWanita.push("a")
+      break;
+    }
+  }
+
+  jumlahWanita = jumlahWanita.length
+  jumlahPria = jumlahPria.length
 
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
@@ -44,11 +60,18 @@ function lakukanLooping(arrPegawai) {
       Apabila Pria lebih banyak dari Wanita, maka komentar akan berisi:
         "Jumlah Pria lebih banyak dari Wanita"
       Apabila Wanita lebih banyak dari Pria, maka komentar akan berisi:
-        "Jumlah Wanita lebih banyak dari Pria"
+        "Jumlah Wanita lebih banyak dari Pria
       Apabila imbang, maka komentar akan berisi:
         "Jumlah Pria dan Wanita berimbang"
   */
-  let komentar = null;
+  let komentar = "";
+  if (jumlahPria == jumlahWanita){
+    return komentar = "Jumlah Pria dan Wanita berimbang"
+  }else if (jumlahPria > jumlahWanita){
+    return komentar = "Jumlah Pria lebih banyak dari Wanita"
+  }else{
+    return komentar = "Jumlah Wanita lebih banyak dari Pria"
+  } ;
 
   // ! JANGAN DIMODIFIKASI
   return {
