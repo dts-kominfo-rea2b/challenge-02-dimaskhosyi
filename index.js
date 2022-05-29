@@ -40,15 +40,14 @@ function lakukanLooping(arrPegawai) {
   let jumlahWanita = [];
 
   for(let i = 0; i < arrPegawai.length; i++){
-    switch(arrPegawai[i].jenisKelamin){
-      case "F":
-      return jumlahPria.push("a")
-      break;
-      case "M":
-      return jumlahWanita.push("a")
-      break;
+    if(arrPegawai[i].jenisKelamin == "M"){
+      jumlahPria.push("1")
+    }else{
+      jumlahWanita.push("1")
     }
   }
+
+
 
   jumlahWanita = jumlahWanita.length
   jumlahPria = jumlahPria.length
@@ -66,11 +65,11 @@ function lakukanLooping(arrPegawai) {
   */
   let komentar = "";
   if (jumlahPria == jumlahWanita){
-    return komentar = "Jumlah Pria dan Wanita berimbang"
+    komentar = "Jumlah Pria dan Wanita berimbang"
   }else if (jumlahPria > jumlahWanita){
-    return komentar = "Jumlah Pria lebih banyak dari Wanita"
+    komentar = "Jumlah Pria lebih banyak dari Wanita"
   }else{
-    return komentar = "Jumlah Wanita lebih banyak dari Pria"
+    komentar = "Jumlah Wanita lebih banyak dari Pria"
   } ;
 
   // ! JANGAN DIMODIFIKASI
